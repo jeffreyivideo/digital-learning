@@ -4,6 +4,50 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>個人教育訓練學習護照</title>
+    
+    <!-- 🛡️ 防護三：網域防護罩 (專供 GitHub 外層使用) -->
+    <script>
+      (function() {
+        // 設定您唯一授權的白名單網域
+        var allowedDomain = "jeffreyivideo.github.io";
+        
+        // 取得當前網頁的網域
+        var currentDomain = window.location.hostname;
+        
+        // 如果網域不是空的(本機打開)、不是 localhost，且不等於您的白名單網域，就啟動自毀！
+        if (currentDomain !== "" && currentDomain !== "localhost" && currentDomain !== allowedDomain) {
+            document.documentElement.innerHTML = 
+              "<body style='background-color:#212529; color:#ff4d4d; display:flex; justify-content:center; align-items:center; height:100vh; font-family:sans-serif; flex-direction:column; text-align:center; padding:20px;'>" +
+              "<h1 style='font-size:3rem; margin-bottom:10px;'>🚫 存取被拒</h1>" +
+              "<h3>系統保護機制已啟動：未授權的網域存取。</h3>" +
+              "<p style='color:#ced4da;'>本系統受到版權與網域保護，僅限原授權網站使用。</p>" +
+              "</body>";
+            
+            // 強制停止瀏覽器載入下方裝有系統的 iframe
+            if (window.stop) { window.stop(); }
+        }
+      })();
+    </script>
+
+    <!-- 🛡️ 防護一：禁用滑鼠右鍵與開發者快捷鍵 -->
+    <script>
+      // 禁用滑鼠右鍵
+      document.addEventListener('contextmenu', event => event.preventDefault());
+      
+      // 禁用 F12, Ctrl+Shift+I, Ctrl+Shift+J, Ctrl+U (檢視原始碼)
+      document.addEventListener('keydown', function(e) {
+          if (e.key === 'F12' || 
+              (e.ctrlKey && e.shiftKey && (e.key === 'I' || e.key === 'J' || e.key === 'C')) || 
+              (e.ctrlKey && e.key === 'U')) {
+              e.preventDefault();
+          }
+      });
+      
+      // 禁用文字選取與複製
+      document.addEventListener('selectstart', event => event.preventDefault());
+      document.addEventListener('copy', event => event.preventDefault());
+    </script>
+
     <style>
         /* 重置預設邊距，確保全螢幕滿版 */
         body, html {
@@ -12,7 +56,7 @@
             width: 100%;
             height: 100%;
             overflow: hidden; /* 隱藏最外層的滾動條 */
-            background-color: #f0f2f5; /* 配合您原本護照系統的背景底色 */
+            background-color: #f0f2f5; 
         }
         
         .iframe-container {
@@ -35,7 +79,7 @@
 </head>
 <body>
     <div class="iframe-container">
-        <!-- ✅ 請修改為這樣（加上 allow="web-share"）： -->
+        <!-- 這是您後端系統的真實入口 -->
         <iframe src="https://script.google.com/macros/s/AKfycbxa-7GxCngzutnFOkqjWJJzq7Q-sTubeXjoMJUWOvVuCnvYR7MwyquYPdrb9Ar30AaC/exec" allow="web-share"></iframe>
     </div>
 </body>
