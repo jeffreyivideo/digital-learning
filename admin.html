@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>學習護照總後台</title>
+    <style>
+        /* 讓畫面滿版且隱藏滾動條，完全交由內部的 Google Apps Script 控制 */
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            background-color: #f0f2f5;
+        }
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+      💡 請將下方的 src 替換為您的 Google Apps Script 部署網址！
+      ⚠️ 記得要在網址最後面加上 ?page=admin
+    -->
+    <iframe src="https://script.google.com/macros/s/AKfycbxa-7GxCngzutnFOkqjWJJzq7Q-sTubeXjoMJUWOvVuCnvYR7MwyquYPdrb9Ar30AaC/exec?page=admin" allow="autoplay; fullscreen" allowfullscreen></iframe>
+</body>
+</html>
