@@ -1,0 +1,21 @@
+{
+  "name": "個人學習護照 - 信實集團",
+  "short_name": "學習護照",
+  "description": "信實集團員工專屬的個人學習與健康護照",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#f8f9fa",
+  "theme_color": "#17a2b8",
+  "icons": [
+    {
+      "src": "icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
